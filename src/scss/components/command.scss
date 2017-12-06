@@ -1,0 +1,43 @@
+@import '../variables';
+
+.command {
+  &__form {
+    display: flex;
+
+    ::-webkit-input-placeholder {
+      color: $colorGreyL3;
+    }
+    ::-moz-placeholder {
+      color: $colorGreyL3;
+    }
+    :-ms-input-placeholder {
+      color: $colorGreyL3;
+    }
+  }
+
+  &__input {
+    font-family: $fontFamily;
+    font-size: 16px;
+    border: 2px solid $colorCyanL1;
+    padding: 12px;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  &__submit-button {
+    font-family: $fontFamily;
+    font-weight: bold;
+    width: 110px;
+    background: $colorGreenL1;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &:hover {
+      background: $colorGreenL2;
+    }
+  }
+}
