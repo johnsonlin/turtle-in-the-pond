@@ -4,30 +4,27 @@
   "description": "Turtle in the Pond",
   "author": "Johnson Lin",
   "license": "MIT",
+  "homepage": "https://johnsonlin.github.io/turtle-in-the-pond",
   "scripts": {
     "build-css": "node-sass-chokidar src/scss/ -o src/css/",
     "watch-css": "npm run build-css && node-sass-chokidar src/scss/ -o src/css/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test"
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.1.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
-    "react-redux": "^5.0.5",
-    "react-test-renderer": "^15.5.4",
-    "redux": "^3.5.2",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
-  },
-  "devDependencies": {
-    "enzyme": "^2.8.2",
-    "react-addons-test-utils": "^15.5.1",
-    "react-scripts": "^1.0.2"
   }
 }
